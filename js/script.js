@@ -18,6 +18,10 @@ let precio_producto = parseFloat(prompt("Ingrese el Precio del Producto"));
 let cantidad_producto = parseInt(prompt("Ingrese Cantidad del Producto"));
 let metodo_pago;
 
+//Declaracion de Array
+const producto = [nombre_producto, precio_producto, cantidad_producto, metodo_pago]
+console.log(producto);
+
 do {
     metodo_pago = prompt("Ingrese Método de Pago (Efectivo / Tarjeta").toUpperCase();
     
@@ -84,8 +88,13 @@ if ((cuotas == 0) || (cuotas == 1)) {
 
 // Salida
 let mensaje = "Producto: " + nombre_producto + "\n";
-mensaje += "Precio por Unidad: " + precio_producto + "\n";
-mensaje += "Cantidad de Productos: " + cantidad_producto + "\n";
+
+//Llamado de Array
+mensaje += "Precio por Unidad: " + producto[1] + "\n";
+mensaje += "Cantidad de Productos: " +producto[2] + "\n";
+console.log(producto[1] + " Confimacion de que el Array Funciona")
+console.log(producto[2] + " Confimacion de que el Array Funciona")
+
 mensaje += "Total Bruto: $" + total_pagar_bruto + "\n";
 mensaje += "Total con IVA: $ " + total_pagar_iva + "\n";
 
