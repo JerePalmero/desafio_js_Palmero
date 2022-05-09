@@ -87,6 +87,29 @@ if ((cuotas == 0) || (cuotas == 1)) {
 }
 
 // Salida
+//DOM
+var salida = document.getElementsByClassName("salida");
+console.log(salida);
+console.log(salida[0].innerHTML);
+console.log(salida[1].innerHTML);
+console.log(salida[2].innerHTML);
+console.log(salida[3].innerHTML);
+console.log(salida[4].innerHTML);
+console.log(salida[5].innerHTML);
+console.log(salida[6].innerHTML);
+console.log(salida[7].innerHTML);
+console.log(salida[8].innerHTML);
+salida[0].innerHTML = "Producto: " + nombre_producto;
+salida[1].innerHTML = "Precio del Producto: " + "$" +precio_producto + ".-";
+salida[2].innerHTML = "Cantidad del Producto: " + cantidad_producto;
+salida[3].innerHTML = "Método de Pago:  " + metodo_pago;
+
+salida[4].innerHTML = "Precio Total a Pagar Bruto:  " + "$" + total_pagar_bruto + ".-";
+salida[5].innerHTML = "Total con Descuentos (Si se aplica):  " + "$" + total_pagar_descuento + ".-";
+salida[6].innerHTML = "Cantidad de cuotas y monto de cada cuota:  " + cuotas + " de $" + total_pagar_cuotas + ".-";
+salida[7].innerHTML = "Total con Intereses (Si se aplica):  " + "$" + total_pagar_interes + ".-";
+salida[8].innerHTML = "TOTAL A PAGAR:  " + "$" + total_pagar + ".-";
+
 let mensaje = "Producto: " + nombre_producto + "\n";
 
 //Llamado de Array
@@ -109,7 +132,7 @@ if (interes_aplicado) {
     mensaje += "Cuotas: " + cuotas + " de $" + total_pagar_cuotas + "\n";
     total_pagar = total_pagar_cuotas;
 }
-
+ 
 mensaje += "TOTAL A PAGAR: $" + total_pagar;
 alert(mensaje);
 console.log(mensaje);
