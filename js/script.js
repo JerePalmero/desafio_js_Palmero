@@ -11,7 +11,13 @@ const interes3 = (x) => {return x * 0.25}; // Intereses para 2, 3, 4 y 5 Cuotas
 const interes6 = (x) => {return x * 0.35}; // Intereses para 6, 7, 8, 9, 10 y 11 Cuotas
 const interes12 = (x) => {return x * 0.45}; // Intereses para 12 Cuotas
 
- 
+// Boton de confirmacion
+let boton = document.getElementById("compra");
+boton.addEventListener("click", respuestaClick);
+
+function respuestaClick() {
+    alert("Compra Realizada")}
+
 // Entrada de Datos
 let nombre_producto = prompt("Ingrese el Nombre del Producto");
 let precio_producto = parseFloat(prompt("Ingrese el Precio del Producto"));
@@ -136,3 +142,6 @@ if (interes_aplicado) {
 mensaje += "TOTAL A PAGAR: $" + total_pagar;
 alert(mensaje);
 console.log(mensaje);
+
+
+
